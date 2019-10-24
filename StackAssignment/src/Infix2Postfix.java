@@ -30,7 +30,7 @@ public class Infix2Postfix {
 				stack.push(String.valueOf(exp[i]));
 				//System.out.println(stack.peek());
 			}else if(exp[i]==')') {
-				while(stack.peek() != "("){
+				while(String.valueOf(stack.peek()) != "("){
 					System.out.println(stack.peek());
 					result += stack.peek(); 
 					System.out.println(result);
@@ -44,11 +44,11 @@ public class Infix2Postfix {
 			}
 			System.out.println("\nPostfix: "+result);
 		}
-		/**while(!stack.isEmpty()) {
+		while(!stack.isEmpty()) {
 			result += String.valueOf(stack.peek());
 			stack.pop();
 		}
-		*/
+		
 		return result;
 	}
 	
