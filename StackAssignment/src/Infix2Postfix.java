@@ -25,6 +25,7 @@ public class Infix2Postfix {
 		}
 		
 		for (int i = 0; i < noW.length(); i++){
+			System.out.print("\nInput: "+String.valueOf(exp[i])+"\nStack: ");
 			if ( precedence(exp[i]) == 1 || precedence(exp[i]) == 2 || exp[i]=='(') {
 				stack.push(String.valueOf(exp[i]));
 				//System.out.println(stack.peek());
@@ -38,11 +39,16 @@ public class Infix2Postfix {
 			}else {
 				result += String.valueOf(exp[i]);
 			}
+			if(!stack.isEmpty()) {
+				System.out.print(stack.peek());
+			}
+			System.out.println("\nPostfix: "+result);
 		}
-		while(!stack.isEmpty()) {
+		/**while(!stack.isEmpty()) {
 			result += String.valueOf(stack.peek());
 			stack.pop();
 		}
+		*/
 		return result;
 	}
 	
