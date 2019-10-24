@@ -7,6 +7,14 @@ public class Infix2Postfix {
 	 * contains only single-digit operands, four binary operators (+, -, *, /) and
 	 * parentheses.
 	 */
+	public String in2P(String infix) {
+		
+		
+		return "";
+	}
+	
+	
+	
 	// precedence() method takes operator as input and return the precendence as an
 	// integer.
 	// Larger number indicates higher precedence.
