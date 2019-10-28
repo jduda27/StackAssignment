@@ -28,14 +28,14 @@ public class Infix2Postfix {
 			System.out.print("\nInput: "+String.valueOf(exp[i])+"\nStack: ");
 			if ( precedence(exp[i]) == 1 || precedence(exp[i]) == 2 || exp[i]=='(') {
 				stack.push(String.valueOf(exp[i]));
-				//System.out.println(stack.peek());
+				System.out.println("Push"+ stack.peek());
 			}else if(exp[i]==')') {
-				while(String.valueOf(stack.peek()) != "("){
-					System.out.println(stack.peek());
-					result += stack.peek(); 
-					System.out.println(result);
+				while(!(String.valueOf(stack.peek()).equals("(")) ){
+					result += String.valueOf(stack.peek());
+					System.out.println("Pop"+ stack.peek());
 					stack.pop();
 				}
+				stack.pop();
 			}else {
 				result += String.valueOf(exp[i]);
 			}
@@ -76,5 +76,6 @@ public class Infix2Postfix {
 		//Create a new stack using StackArrayBased class.
 		//Your implementation of infix to postfix algorithm goes here.
 		System.out.println(in2P("a+b*(c+d)/e"));
+		System.out.println(in2P("(2+4)*(6-9)"));
 	}
 }
