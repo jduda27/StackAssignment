@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Infix2Postfix {
 
-	/*
-	 * Convert infix expression to postfix expression by implementing a stack. Infix
+	/* in2P() method
+	 * Converts infix expression to postfix expression by implementing a stack. Infix
 	 * contains only single-digit operands, four binary operators (+, -, *, /) and
 	 * parentheses.
 	 * Precondition: String infix - Any valid string representing a infix equation
