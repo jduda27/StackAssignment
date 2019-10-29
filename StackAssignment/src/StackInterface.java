@@ -10,7 +10,7 @@ public interface StackInterface {
   // Precondition: None.
   // Postcondition: Stack is empty.
 
-  public void push(Object newItem) throws StackException;
+  public void push(char newItem) throws StackException;
   // Adds an item to the top of a stack.
   // Precondition: newItem is the item to be added.
   // Postcondition: If insertion is successful, newItem
@@ -19,7 +19,7 @@ public interface StackInterface {
   // StackException when newItem cannot be placed on
   // the stack.
 
-  public Object pop() throws StackException;
+  public char pop() throws StackException;
   // Removes the top of a stack.
   // Precondition: None.
   // Postcondition: If the stack is not empty, the item 
@@ -28,7 +28,7 @@ public interface StackInterface {
   // Exception: Throws StackException if the stack is 
   // empty.
   
-  public Object peek() throws StackException;
+  public char peek() throws StackException;
   // Retrieves the top of a stack.
   // Precondition: None.
   // Postcondition: If the stack is not empty, the item

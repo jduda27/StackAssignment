@@ -1,10 +1,10 @@
 public class StackArrayBased implements StackInterface {
 	final int MAX_STACK = 50; // maximum size of stack
-	private Object items[];
+	private char items[];
 	private int top;
 
 	public StackArrayBased() {
-		items = new Object[MAX_STACK];
+		items = new char[MAX_STACK];
 		top = -1;
 	} // end default constructor
 
@@ -16,7 +16,7 @@ public class StackArrayBased implements StackInterface {
 		return top == MAX_STACK - 1;
 	} // end isFull
 
-	public void push(Object newItem) throws StackException {
+	public void push(char newItem) throws StackException {
 		if (!isFull()) {
 			items[++top] = newItem;
 		} else {
@@ -25,11 +25,11 @@ public class StackArrayBased implements StackInterface {
 	} // end push
 
 	public void popAll() {
-		items = new Object[MAX_STACK];
+		items = new char[MAX_STACK];
 		top = -1;
 	} // end popAll
 
-	public Object pop() throws StackException {
+	public char pop() throws StackException {
 		if (!isEmpty()) {
 			return items[top--];
 		} else {
@@ -37,7 +37,7 @@ public class StackArrayBased implements StackInterface {
 		} // end if
 	} // end pop
 
-	public Object peek() throws StackException {
+	public char peek() throws StackException {
 		if (!isEmpty()) {
 			return items[top];
 		} else {
